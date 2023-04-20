@@ -1,0 +1,50 @@
+.Header {
+  height: 12vw;
+}
+
+.NavContainer {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.63);
+  height: 5.4vw;
+  box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.Logo {
+  position: relative;
+  top: 0.7vw;
+  margin-left: 12vw;
+  height: 3.9vw;
+  width: 3.9vw;
+}
+
+.BrandName {
+  position: relative;
+  width: fit-content;
+  top: -2.7vw;
+  margin-left: 17vw;
+  font-size: 36px;
+}
+
+.MenuButton {
+  height: 0.5vw;
+  width: 3vw;
+  position: relative;
+  top: -5.55vw;
+  margin-left: 85vw;
+  height: 3vw;
+  background-color: bisque;
+  border-radius: 25%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 9px 9px rgba(0, 0, 0, 0.063);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Arrow {
+  position: relative;
+  width: 2vw;
+  height: 2vw;
+}
