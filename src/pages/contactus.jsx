@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Styles from '../styles/styles/ContactUs.module.scss'
+import Styles from '../styles/ContactUs.module.scss'
 import NavBar from './components/NavBar'
 
 export default function contactus() {

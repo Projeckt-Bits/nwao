@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Styles from '../styles/styles/AboutUs.module.scss'
+import Styles from '../styles/AboutUs.module.scss'
 import NavBar from './components/NavBar'
 
 export default function aboutus() {
