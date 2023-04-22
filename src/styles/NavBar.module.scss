@@ -1,11 +1,11 @@
 .Header {
-  height: 12vw;
+  height: 18vw;
 }
 
 .NavContainer {
   position: relative;
   background-color: rgba(255, 255, 255, 0.63);
-  height: 5.4vw;
+  height: 4.5vw;
   box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
@@ -13,26 +13,25 @@
 .Logo {
   position: relative;
   top: 0.7vw;
-  margin-left: 12vw;
-  height: 3.9vw;
-  width: 3.9vw;
+  margin-left: 15vw;
+  height: 3vw;
+  width: 3vw;
 }
 
 .BrandName {
   position: relative;
   width: fit-content;
-  top: -2.7vw;
-  margin-left: 17vw;
-  font-size: 36px;
+  top: -1.8vw;
+  margin-left: 19vw;
+  font-size: 1.5vw;
 }
 
 .MenuButton {
-  height: 0.5vw;
-  width: 3vw;
+  height: 2.7vw;
+  width: 2.7vw;
   position: relative;
-  top: -5.55vw;
-  margin-left: 85vw;
-  height: 3vw;
+  top: -4.25vw;
+  margin-left: 82.5vw;
   background-color: bisque;
   border-radius: 25%;
   cursor: pointer;
@@ -45,6 +44,46 @@
 
 .Arrow {
   position: relative;
-  width: 2vw;
-  height: 2vw;
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+.NavUl {
+  
+}
+
+
+
+
+
+
+
+
+
+/*Responsiveness*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .html {
+    font-size: 55%;
+  }
 }
