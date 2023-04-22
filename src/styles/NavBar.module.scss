@@ -1,5 +1,5 @@
 .Header {
-  height: 18vw;
+  height: 45vw;
 }
 
 .NavContainer {
@@ -8,6 +8,10 @@
   height: 4.5vw;
   box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.1);
   z-index: 1;
+}
+
+.NavBar {
+  position: sticky;
 }
 
 .Logo {
@@ -49,41 +53,48 @@
 }
 
 .NavUl {
-  
+  position: relative;
+  display: none;
+  top: -2.5vw;
+  margin-left: 72.2vw;
+  flex-direction: column;
+  list-style: none;
+  z-index: 2;
 }
 
-
-
-
-
-
-
-
+.NavLiBtn {
+  position: relative;
+  margin: 1vw;
+  height: 3vw;
+  width: 12vw;
+  border-radius: 25px;
+  border: none;
+  background-color: bisque;
+  font-family: Poppins, sans-serif;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.08vw;
+  cursor: pointer;
+  box-shadow: 0 0 9px 9px rgba(0, 0, 0, 0.063);
+}
 
 /*Responsiveness*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .html {
-    font-size: 55%;
-  }
 }

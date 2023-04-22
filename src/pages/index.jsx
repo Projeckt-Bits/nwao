@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Styles from '@/styles/Index.module.scss'
 import NavBar from './components/NavBar'
 
-export default function Home() {
+export default function index() {
   return (
     <>
       <Head>

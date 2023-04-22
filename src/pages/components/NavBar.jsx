@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Styles from "@/styles/NavBar.module.scss";
 import Logo from "../../../public/assets/vectors/NWAO Logo.svg";
 import Arrow from "../../../public/assets/vectors/Down Double Arrow.svg";
@@ -7,14 +8,17 @@ var State = 0;
 function RotateArrow() {
   const MenuButton = document.getElementById("MenuButton");
   const Arrow = document.getElementById("Arrow");
+  const NavUl = document.getElementById("NavUl");
   if (State == 0) {
     Arrow.style.cssText =
       "transform: rotate(180deg); transition: all 100ms ease-in-out";
+    NavUl.style.display = "flex";
     State = 1;
   } else {
     Arrow.style.cssText =
       "transform: rotate(0deg); transition: all 100ms ease-in-out";
     State = 0;
+    NavUl.style.display = "none";
   }
 }
 
@@ -41,26 +45,41 @@ export default function NavBar() {
                 priority
               />
             </button>
-            <ul className={Styles.NavUl}>
+            <ul className={Styles.NavUl} id="NavUl">
               <li className={Styles.NavLi}>
-                <button className={Styles.NavLiBtn}>
-                  Home
-                </button>
-                <button className={Styles.NavLiBtn}>
-                  PetLog
-                </button>
-                <button className={Styles.NavLiBtn}>
-                  PetShoppe
-                </button>
-                <button className={Styles.NavLiBtn}>
-                  Support Us
-                </button>
-                <button className={Styles.NavLiBtn}>
-                  About Us
-                </button>
-                <button className={Styles.NavLiBtn}>
-                  Contact Us
-                </button>
+                <Link href="/">
+                  <button className={Styles.NavLiBtn}>Home</button>
+                </Link>
+              </li>
+              <li className={Styles.NavLi}>
+                <Link href="/ouraim">
+                  <button className={Styles.NavLiBtn}>Our Aim</button>
+                </Link>
+              </li>
+              <li className={Styles.NavLi}>
+                <Link href="/petlog">
+                  <button className={Styles.NavLiBtn}>PetLog</button>
+                </Link>
+              </li>
+              <li className={Styles.NavLi}>
+                <Link href="/petshoppe">
+                  <button className={Styles.NavLiBtn}>PetShoppe</button>
+                </Link>
+              </li>
+              <li className={Styles.NavLi}>
+                <Link href="/supportus">
+                  <button className={Styles.NavLiBtn}>Support Us</button>
+                </Link>
+              </li>
+              <li className={Styles.NavLi}>
+                <Link href="/aboutus">
+                  <button className={Styles.NavLiBtn}>About Us</button>
+                </Link>
+              </li>
+              <li className={Styles.NavLi}>
+                <Link href="/contactus">
+                  <button className={Styles.NavLiBtn}>Contact Us</button>
+                </Link>
               </li>
             </ul>
           </nav>
