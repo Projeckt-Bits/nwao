@@ -1,7 +1,75 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Styles from '../styles/SupportUs.module.scss'
-import NavBar from './components/NavBar'
+import Head from "next/head";
+import Image from "next/image";
+import Styles from "../styles/SupportUs.module.scss";
+import NavBar from "./components/NavBar";
+
+function loadRazorPayScripts(src) {
+  return new Promise((resolve) => {
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = () => {
+      resolve(true);
+    };
+    script.onerror = () => {
+      resolve(false);
+    };
+    document.body.appendChild(script);
+  });
+}
+
+var orderDetails;
+
+async function createRazorPayOrder() {
+  var instance = new Razorpay({
+    key_id: "rzp_test_0oMdAo1kANl0ce",
+    key_secret: "yhBCngVC0s4FJDpgL7nQUAIh",
+  });
+
+  orderDetails = instance.orders.create({
+    amount: 50000,
+    currency: "INR",
+    receipt: "receipt#1",
+  });
+
+  console.log(orderDetails);
+}
+
+async function displayRazorPay() {
+  const res = await loadRazorPayScripts(
+    "https://checkout.razorpay.com/v1/checkout.js"
+  );
+
+  if (!res) {
+    alert("Razorpay SDK failed to load. Are you online?");
+    return;
+  }
+
+  createRazorPayOrder();
+
+  var options = {
+    key: "rzp_test_0oMdAo1kANl0ce",
+    currency: "INR",
+    amount: "50000",
+    order_id: orderDetails.id,
+    name: "NWAO",
+    description: "Donation From Sourashis & Co.",
+    image: "https://example.com/your_logo",
+    prefill: {
+      name: "Sourashis Ghosh Roy",
+      email: "personal.sourashisghoshroy@gmail.com",
+      contact: "+91 6291668871",
+    },
+    notes: {
+      address:
+        "Sourashis & Co. | 12B/1H, Chanditala Lane, Tollygunge, Kolkata - 700040",
+    },
+    theme: {
+      color: "#FF8000",
+    },
+  };
+  var RazorPayObj = new Razorpay(options);
+  RazorPayObj.open();
+}
 
 export default function supportus() {
   return (
@@ -12,6 +80,9 @@ export default function supportus() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <NavBar />
+      <button className={Styles.PayBtn} onClick={displayRazorPay}>
+        Pay $ 1000
+      </button>
     </>
-  )
+  );
 }
